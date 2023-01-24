@@ -9,7 +9,7 @@ use App\Models\Train;
 class LaravelMigrationSeederController extends Controller
 {
     public function index(){
-        $datiOrario = Train::where('orario_di_partenza', '23/01/2023');
+        $datiOrario = Train::where('orario_di_partenza', '23-01-24');
 
         return view('index', [
             'datiOrario'=>$datiOrario
