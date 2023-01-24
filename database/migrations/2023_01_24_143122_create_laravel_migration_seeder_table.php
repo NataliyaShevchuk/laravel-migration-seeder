@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('azienda');
             $table->string('stazione_di_partenza');
             $table->string('stazione_di_arrivo');
+            // $table->renameColumn('staziione_di_arrivo', 'stazione_di_arrivo')->change();
+            // $table->dropColumn('staziione_di_arrivo');
             $table->dateTime('orario_di_partenza');
             $table->dateTime('orario_di_arrivo');
             $table->char('codice_treno', length:4);
@@ -37,5 +39,6 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('laravel_migration_seeder');
+            
     }
 };
